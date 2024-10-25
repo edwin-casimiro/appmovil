@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart' as carousel_slider;
-import 'package:feather_icons/feather_icons.dart';
+
 
 import 'package:flutter/material.dart';
-import 'package:movil/models/bag.dart';
+import 'package:appmovil/models/bag.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movil/widgets/bag_item.dart';
+import 'package:appmovil/widgets/bag_item.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -16,12 +16,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<Bag> bags = listOfBags();
   List<String> heroimages = [
-    "assets/imagenes/product-1.jpg",
-    "assets/imagenes/product-2.jpg",
-    "assets/imagenes/product-3.jpg",
-    "assets/imagenes/product-4.jpg",
+    "imagenes/product-1.jpg",
+    "imagenes/product-2.jpg",
+    "imagenes/product-3.jpg",
+    "imagenes/product-4.jpg",
   ];
-  final CarouselController _controller = CarouselController(); // Corregido
+  final CarouselController _controller = CarouselController(); 
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
         leading: IconButton(
           iconSize: 40,
           onPressed: () {},
-          icon: Image.asset("assets/imagenes/icono_3.png"),
+          icon: Image.asset("imagenes/icono_3.png"),
         ),
         actions: [
           Container(
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
             decoration: const BoxDecoration(
                 color: Colors.black, shape: BoxShape.circle),
             child:
-                Image.asset("assets/imagenes/favicon.ico", fit: BoxFit.contain),
+                Image.asset("imagenes/favicon.ico", fit: BoxFit.contain),
           )
         ],
       ),
@@ -78,59 +78,6 @@ class _HomeState extends State<Home> {
             ),
           ),
         ]),
-      ),
-      bottomNavigationBar: Container(
-        height: 65,
-        margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
-        decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(69)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.home,
-                  size: 30,
-                  color: Colors.black,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search,
-                  size: 30,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.heart_broken,
-                  size: 30,
-                  color: Colors.black,
-                )),
-            Stack(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    FeatherIcons.shoppingCart,
-                    size: 30,
-                    color: Colors.black,
-                  ),
-                ),
-                const Positioned(
-                  child: CircleAvatar(
-                    backgroundColor: Colors.red,
-                    radius: 10,
-                    child: Text(
-                      "2",
-                      style: TextStyle(fontSize: 13),
-                    ),
-                  ),
-                )
-              ],
-            )
-          ],
-        ),
       ),
     );
   }

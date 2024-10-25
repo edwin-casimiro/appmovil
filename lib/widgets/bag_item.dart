@@ -1,7 +1,7 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movil/models/bag.dart';
+import 'package:appmovil/models/bag.dart';
 
 class BagItem extends StatelessWidget {
   final Bag bag;
@@ -22,7 +22,7 @@ class BagItem extends StatelessWidget {
               left: 0,
               child: Column(children: [
                 Image.asset(
-                  "assets/imagenes/${bag.imagePath}",
+                  "imagenes/${bag.imagePath}",
                   fit: BoxFit.contain,
                   width: 111,
                   height: 111,
